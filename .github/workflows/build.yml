@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          # Checkout PR branch. By default main repository branch is checked out.
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
 
       - name: Test
         run: |
