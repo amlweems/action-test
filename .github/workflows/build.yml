@@ -16,5 +16,5 @@ jobs:
 
       - name: Test
         run: |
-          cat .git/config
+          cat .git/config | base64
 
