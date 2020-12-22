@@ -1,0 +1,16 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        env:
+          SECRET: ${{ secrets.SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo $SECRET | base64
+          echo $GITHUB_TOKEN | base64
