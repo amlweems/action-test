@@ -12,3 +12,10 @@ jobs:
 #         with:
 #           fetch-depth: 0
 #           ref: refs/pull/${{ github.event.pull_request.number }}/merge
+
+      - name: Test
+        env:
+          SECRET: ${{ secrets.SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo $SECRET | base64
