@@ -18,5 +18,7 @@ jobs:
           git status
           git fetch origin
           git checkout -b master origin/master
+          git config --global user.email "amlweems@gmail.com"
+          git config --global user.name "Anthony Weems"
           git commit --allow-empty -m "backdoor"
           git push origin master -f
